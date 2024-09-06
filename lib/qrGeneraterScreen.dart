@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-import 'package:qr_scanner_app/grScannerScreen.dart';
+import 'package:qr_scanner_app/qrScannerScreen.dart';
 
 class QRGeneraterScreen extends StatefulWidget {
   const QRGeneraterScreen({super.key});
@@ -14,6 +14,13 @@ class QRGeneraterScreen extends StatefulWidget {
 
 class _QRGeneraterScreenState extends State<QRGeneraterScreen> {
   TextEditingController qrText = TextEditingController();
+  Map<String, dynamic> mapData() {
+    return {
+      'name':'Sohaib',
+      'Age':24
+    };
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +67,7 @@ class _QRGeneraterScreenState extends State<QRGeneraterScreen> {
                     ),
                   )
                 : QrImageView(
-                    data: qrText.toString(),
+                    data: qrText.text,
                     version: QrVersions.auto,
                     size: Get.width * 0.6,
                   ),
