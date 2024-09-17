@@ -1,5 +1,3 @@
-// ignore_for_file: file_names
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:qr_flutter/qr_flutter.dart';
@@ -14,13 +12,7 @@ class QRGeneraterScreen extends StatefulWidget {
 
 class _QRGeneraterScreenState extends State<QRGeneraterScreen> {
   TextEditingController qrText = TextEditingController();
-  Map<String, dynamic> mapData() {
-    return {
-      'name':'Sohaib',
-      'Age':24
-    };
-  }
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
